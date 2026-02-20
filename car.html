@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APEX Motors - Premium Luxury Vehicles</title>
+    <link rel="stylesheet" href="car.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/949c32d03e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-bolt"></i>
+                <span>APEX</span>
+                
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#inventory" class="nav-link">Inventory</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="favorites.html" class="wishlist-btn" id="wishlistBtn">
+                    <i class="fas fa-heart"></i>
+                    <span id="wishlistCount">0</span>
+                </a>
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Video -->
+    <section id="home" class="hero">
+        <video class="hero-video" autoplay muted loop playsinline preload="metadata">
+            <source src="car.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">DRIVE EXCELLENCE</h1>
+            <p class="hero-subtitle">Discover the finest collection of luxury automobiles</p>
+            <button class="cta-btn" onclick="scrollToSection('#inventory')">
+                Explore Now
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section id="inventory" class="inventory">
+        <div class="section-header">
+            <h2>Premium Collection</h2>
+            <p>Handpicked luxury vehicles for the discerning driver</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All Vehicles</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="luxury">Luxury</button>
+            <button class="filter-btn" data-filter="suv">SUV</button>
+        </div>
+
+        <div class="cars-grid" id="carsGrid"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>Why Choose APEX?</h2>
+                <div class="features-list">
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Certified Premium</h3>
+                            <p>Every vehicle undergoes rigorous inspection</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Lifetime Support</h3>
+                            <p>24/7 customer service and maintenance</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Financing Options</h3>
+                            <p>Flexible payment plans tailored to you</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3>Trade-In Available</h3>
+                            <p>Get best value for your current vehicle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <div class="about-card">
+                    <div class="stat">
+                        <h3>500+</h3>
+                        <p>Vehicles Sold</p>
+                    </div>
+                    <div class="stat">
+                        <h3>98%</h3>
+                        <p>Customer Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Schedule a test drive or inquire about a vehicle</p>
+        </div>
+
+        <div class="contact-container">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Address</h4>
+                        <p>123 Luxury Drive, Auto City, AC 10001</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p><a href="mailto:info@apexmotors.com">info@apexmotors.com</a></p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>Mon-Fri: 9am - 8pm<br>Sat-Sun: 10am - 6pm</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Car Detail Modal -->
+    <div class="modal" id="carModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Car">
+                    <span class="modal-badge" id="modalBadge"></span>
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalCategory"></p>
+                    <h3 id="modalPrice"></h3>
+                    
+                    <div class="specs">
+                        <div class="spec-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <div>
+                                <span class="spec-label">Performance</span>
+                                <p id="modalPerformance"></p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-gas-pump"></i>
+                            <div>
+                                <span class="spec-label">Fuel Type</span>
+                                <p id="modalFuel"></p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-chair"></i>
+                            <div>
+                                <span class="spec-label">Seats</span>
+                                <p id="modalSeats"></p>
+                            </div>
+                        </div>
+                        <div class="spec-item">
+                            <i class="fas fa-cogs"></i>
+                            <div>
+                                <span class="spec-label">Transmission</span>
+                                <p id="modalTransmission"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="features" id="modalFeatures"></div>
+
+                    <p id="modalDescription"></p>
+
+                    <div class="modal-actions">
+                        <button class="wishlist-btn-modal" id="wishlistBtnModal">
+                            <i class="fas fa-heart"></i> Add to Wishlist
+                        </button>
+                        <button class="test-drive-btn" id="scheduleTestDriveBtn">
+                            <i class="fas fa-calendar"></i> Schedule Test Drive
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Test Drive Booking Modal -->
+    <div class="modal" id="testDriveModal">
+        <div class="modal-content">
+            <button class="modal-close" id="testDriveModalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="test-drive-form-wrapper">
+                <div class="test-drive-header">
+                    <h2>Schedule Your Test Drive</h2>
+                    <p id="testDriveCarName"></p>
+                </div>
+                <form class="test-drive-form" id="testDriveForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="driveName">Full Name *</label>
+                            <input type="text" id="driveName" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="driveEmail">Email Address *</label>
+                            <input type="email" id="driveEmail" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="drivePhone">Phone Number *</label>
+                            <input type="tel" id="drivePhone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="driveDate">Preferred Date *</label>
+                            <input type="date" id="driveDate" name="date" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="driveTime">Preferred Time *</label>
+                            <select id="driveTime" name="time" required>
+                                <option value="">Select a time</option>
+                                <option value="9:00 AM">9:00 AM</option>
+                                <option value="10:00 AM">10:00 AM</option>
+                                <option value="11:00 AM">11:00 AM</option>
+                                <option value="12:00 PM">12:00 PM</option>
+                                <option value="2:00 PM">2:00 PM</option>
+                                <option value="3:00 PM">3:00 PM</option>
+                                <option value="4:00 PM">4:00 PM</option>
+                                <option value="5:00 PM">5:00 PM</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="driveLocation">Location Preference *</label>
+                            <select id="driveLocation" name="location" required>
+                                <option value="">Select location</option>
+                                <option value="Downtown Showroom">Downtown Showroom</option>
+                                <option value="Airport Showroom">Airport Showroom</option>
+                                <option value="Home Delivery">Home Delivery</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="driveMessage">Additional Notes (Optional)</label>
+                        <textarea id="driveMessage" name="message" rows="3" placeholder="Any special requests or questions?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Confirm Test Drive</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>APEX Motors</h4>
+                <p>Premium luxury vehicles for the elite driver</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#inventory">Inventory</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 APEX Motors. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="car.js"></script>
+</body>
+</html>
