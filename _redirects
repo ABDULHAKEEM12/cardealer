@@ -1,0 +1,3 @@
+# Serve files as-is - no redirects needed for static site with existing HTML files
+
+# Netlify will automatically serve vehicle-detail.html and favorites.html when accessed

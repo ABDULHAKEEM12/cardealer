@@ -305,7 +305,7 @@ function displayBrandGallery(brandCars, currentIndex) {
         }),
       );
       // Navigate to home page contact form
-      window.location.href = "car.html#contact";
+      window.location.href = "/#contact";
     });
   }
 }
@@ -360,7 +360,7 @@ function displayVehicleDetail(vehicle) {
       }),
     );
     // Navigate to home page contact form
-    window.location.href = "car.html#contact";
+    window.location.href = "/#contact";
   });
 }
 

@@ -2795,7 +2795,7 @@ body.light-mode .car-category {
     color: var(--accent-main) !important;
   }
   }
-}
+
 
 /* iPhone XR and small devices optimization (max 375px) */
 @media (max-width: 375px) {
