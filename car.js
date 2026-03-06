@@ -305,7 +305,8 @@ function displayBrandGallery(brandCars, currentIndex) {
         }),
       );
       // Navigate to home page contact form
-      window.location.href = "/#contact";
+      sessionStorage.setItem("scrollToContact", "true");
+      window.location.href = "../car.html";
     });
   }
 }
@@ -347,21 +348,24 @@ function displayVehicleDetail(vehicle) {
   });
 
   const whatsappBtn = document.getElementById("detailWhatsappBtn");
-  whatsappBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    // Store vehicle info in sessionStorage
-    sessionStorage.setItem(
-      "selectedVehicle",
-      JSON.stringify({
-        name: vehicle.name,
-        price: vehicle.price,
-        description: vehicle.description,
-        brand: vehicle.brand,
-      }),
-    );
-    // Navigate to home page contact form
-    window.location.href = "/#contact";
-  });
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Store vehicle info in sessionStorage
+      sessionStorage.setItem(
+        "selectedVehicle",
+        JSON.stringify({
+          name: vehicle.name,
+          price: vehicle.price,
+          description: vehicle.description,
+          brand: vehicle.brand,
+        }),
+      );
+      // Navigate to home page contact form
+      sessionStorage.setItem("scrollToContact", "true");
+      window.location.href = "../car.html";
+    });
+  }
 }
 
 function updateWishlistButton(btn, vehicleId) {
@@ -410,7 +414,7 @@ function loadFavorites() {
                         <div class="car-price">$${car.price.toLocaleString()}</div>
                         <div class="car-actions">
                             <a href="vehicle-detail.html?id=${car.id}" class="view-btn">View Details</a>
-                            <a href="https://wa.me/2349024836537?text=${encodeURIComponent(`Hi APEX Motors! I'm interested in the ${car.name} priced at $${car.price.toLocaleString()}. Can you provide more details?`)}" target="_blank" class="whatsapp-card-btn">
+                            <a href="https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(`Hi! I'm interested in the ${car.name} priced at AED ${car.price}/day. Can you provide more details?`)}" target="_blank" class="whatsapp-card-btn">
                                 <i class="fab fa-whatsapp"></i>
                             </a>
                             <button class="wishlist-card-btn active" onclick="toggleFavorite(${car.id}, event)">
@@ -535,6 +539,17 @@ function setupContactForm() {
       messageField.value = `I am interested in renting the ${vehicle.name} priced at AED ${vehicle.price}/day. ${vehicle.description}`;
     }
     sessionStorage.removeItem("selectedVehicle");
+  }
+
+  // Check if we need to scroll to contact section
+  if (sessionStorage.getItem("scrollToContact")) {
+    sessionStorage.removeItem("scrollToContact");
+    setTimeout(() => {
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 300);
   }
 
   contactForm.addEventListener("submit", (e) => {
