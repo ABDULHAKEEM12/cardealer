@@ -1,182 +1,233 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vehicle Details - APEX Motors</title>
-    <link rel="stylesheet" href="car.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/949c32d03e.js" crossorigin="anonymous"></script>
-</head>
-<body>
+    <link rel="stylesheet" href="car.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/949c32d03e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fas fa-bolt"></i>
-                <span>APEX</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="car.html" class="nav-link">Home</a></li>
-                <li><a href="car.html#inventory" class="nav-link">Inventory</a></li>
-                <li><a href="favorites.html" class="nav-link">
-                    <i class="fas fa-heart"></i>
-                    Favorites
-                </a></li>
-                <li><a href="car.html#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <a href="favorites.html" class="wishlist-btn">
-                    <i class="fas fa-heart"></i>
-                    <span id="wishlistCount">0</span>
-                </a>
-                <button class="menu-toggle" id="menuToggle">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
+      <div class="nav-container">
+        <div class="logo">
+          <i class="fas fa-car"></i>
+          <span>🇦🇪 RENT A CAR DUBAI</span>
         </div>
+        <ul class="nav-links">
+          <li><a href="car.html" class="nav-link">Home</a></li>
+          <li><a href="car.html#inventory" class="nav-link">Inventory</a></li>
+          <li>
+            <a href="favorites.html" class="nav-link">
+              <i class="fas fa-heart"></i>
+              Favorites
+            </a>
+          </li>
+          <li><a href="car.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            title="Toggle Dark/Light Mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button
+            class="language-toggle"
+            id="languageToggle"
+            title="عربي / English"
+          >
+            <i class="fas fa-globe"></i>
+            <span id="langText">العربية</span>
+          </button>
+          <a href="favorites.html" class="wishlist-btn">
+            <i class="fas fa-heart"></i>
+            <span id="wishlistCount">0</span>
+          </a>
+          <button class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
     </nav>
 
     <!-- Back Button -->
     <section class="detail-header">
-        <div class="detail-container">
-            <a href="car.html#inventory" class="back-btn">
-                <i class="fas fa-arrow-left"></i>
-                Back to Inventory
-            </a>
-        </div>
+      <div class="detail-container">
+        <a href="car.html#inventory" class="back-btn">
+          <i class="fas fa-arrow-left"></i>
+          Back to Inventory
+        </a>
+      </div>
     </section>
 
     <!-- Vehicle Detail Section -->
     <section class="vehicle-detail">
-        <div class="detail-container">
-            <div class="detail-content">
-                <!-- Image Section -->
-                <div class="detail-image-section">
-                    <div class="detail-image-wrapper">
-                        <img id="detailImage" src="" alt="Vehicle" class="detail-image">
-                        <span id="detailBadge" class="detail-badge">Badge</span>
-                    </div>
-                </div>
-
-                <!-- Info Section -->
-                <div class="detail-info-section">
-                    <h1 id="detailTitle" class="detail-title">Vehicle Name</h1>
-                    <p id="detailCategory" class="detail-category">Category</p>
-                    
-                    <!-- Specifications -->
-                    <div class="detail-specs">
-                        <div class="spec-box">
-                            <div class="spec-icon">
-                                <i class="fas fa-bolt"></i>
-                            </div>
-                            <div class="spec-content">
-                                <p class="spec-label">Performance</p>
-                                <p id="detailPerformance" class="spec-value">710 HP</p>
-                            </div>
-                        </div>
-                        <div class="spec-box">
-                            <div class="spec-icon">
-                                <i class="fas fa-gas-pump"></i>
-                            </div>
-                            <div class="spec-content">
-                                <p class="spec-label">Fuel Type</p>
-                                <p id="detailFuel" class="spec-value">Premium Petrol</p>
-                            </div>
-                        </div>
-                        <div class="spec-box">
-                            <div class="spec-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div class="spec-content">
-                                <p class="spec-label">Seats</p>
-                                <p id="detailSeats" class="spec-value">2</p>
-                            </div>
-                        </div>
-                        <div class="spec-box">
-                            <div class="spec-icon">
-                                <i class="fas fa-cog"></i>
-                            </div>
-                            <div class="spec-content">
-                                <p class="spec-label">Transmission</p>
-                                <p id="detailTransmission" class="spec-value">7-Speed DCT</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Description -->
-                    <p id="detailDescription" class="detail-description">Vehicle description goes here.</p>
-
-                    <!-- Features List -->
-                    <div class="detail-features">
-                        <h3>Key Features</h3>
-                        <ul id="detailFeaturesList" class="features-list">
-                            <li>Feature 1</li>
-                            <li>Feature 2</li>
-                        </ul>
-                    </div>
-
-                    <!-- Price and Actions -->
-                    <div class="detail-price-section">
-                        <p class="detail-price-label">Starting From</p>
-                        <h2 id="detailPrice" class="detail-price">$650,000</h2>
-                    </div>
-
-                    <!-- Action Buttons -->
-                    <div class="detail-actions">
-                        <button id="detailWishlistBtn" class="wishlist-detail-btn">
-                            <i class="fas fa-heart"></i>
-                            Add to Favorites
-                        </button>
-                        <a id="detailWhatsappBtn" href="#" class="whatsapp-btn" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                            Chat on WhatsApp
-                        </a>
-                    </div>
-
-                    <!-- Contact Info -->
-                    <div class="detail-contact">
-                        <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
-                        <p><i class="fas fa-envelope"></i> contact@apexmotors.com</p>
-                    </div>
-                </div>
+      <div class="detail-container">
+        <div class="detail-content">
+          <!-- Image Section -->
+          <div class="detail-image-section">
+            <div class="detail-image-wrapper">
+              <img id="detailImage" src="" alt="Vehicle" class="detail-image" />
+              <span id="detailBadge" class="detail-badge">Badge</span>
+              <button
+                id="prevCarBtn"
+                class="gallery-nav prev-btn"
+                style="display: none"
+              >
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button
+                id="nextCarBtn"
+                class="gallery-nav next-btn"
+                style="display: none"
+              >
+                <i class="fas fa-chevron-right"></i>
+              </button>
             </div>
+            <div
+              id="brandGalleryContainer"
+              class="brand-gallery-container"
+            ></div>
+          </div>
+
+          <!-- Info Section -->
+          <div class="detail-info-section">
+            <h1 id="detailTitle" class="detail-title">Vehicle Name</h1>
+            <p id="detailCategory" class="detail-category">Category</p>
+
+            <!-- Specifications -->
+            <div class="detail-specs">
+              <div class="spec-box">
+                <div class="spec-icon">
+                  <i class="fas fa-bolt"></i>
+                </div>
+                <div class="spec-content">
+                  <p class="spec-label">Performance</p>
+                  <p id="detailPerformance" class="spec-value">710 HP</p>
+                </div>
+              </div>
+              <div class="spec-box">
+                <div class="spec-icon">
+                  <i class="fas fa-gas-pump"></i>
+                </div>
+                <div class="spec-content">
+                  <p class="spec-label">Fuel Type</p>
+                  <p id="detailFuel" class="spec-value">Premium Petrol</p>
+                </div>
+              </div>
+              <div class="spec-box">
+                <div class="spec-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <div class="spec-content">
+                  <p class="spec-label">Seats</p>
+                  <p id="detailSeats" class="spec-value">2</p>
+                </div>
+              </div>
+              <div class="spec-box">
+                <div class="spec-icon">
+                  <i class="fas fa-cog"></i>
+                </div>
+                <div class="spec-content">
+                  <p class="spec-label">Transmission</p>
+                  <p id="detailTransmission" class="spec-value">7-Speed DCT</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Description -->
+            <p id="detailDescription" class="detail-description">
+              Vehicle description goes here.
+            </p>
+
+            <!-- Features List -->
+            <div class="detail-features">
+              <h3>Key Features</h3>
+              <ul id="detailFeaturesList" class="features-list">
+                <li>Feature 1</li>
+                <li>Feature 2</li>
+              </ul>
+            </div>
+
+            <!-- Price and Actions -->
+            <div class="detail-price-section">
+              <p class="detail-price-label">Starting From</p>
+              <h2 id="detailPrice" class="detail-price">$650,000</h2>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="detail-actions">
+              <button id="detailWishlistBtn" class="wishlist-detail-btn">
+                <i class="fas fa-heart"></i>
+                Add to Favorites
+              </button>
+              <a
+                id="detailWhatsappBtn"
+                href="#"
+                class="whatsapp-btn"
+                target="_blank"
+              >
+                <i class="fab fa-whatsapp"></i>
+                Chat on WhatsApp
+              </a>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="detail-contact">
+              <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+              <p><i class="fas fa-envelope"></i> contact@apexmotors.com</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>APEX Motors</h3>
-                <p>Your destination for premium luxury vehicles</p>
-            </div>
-            <div class="footer-section">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="car.html">Home</a></li>
-                    <li><a href="car.html#inventory">Inventory</a></li>
-                    <li><a href="favorites.html">Favorites</a></li>
-                    <li><a href="car.html#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Follow Us</h4>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                </div>
-            </div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4>RENT A CAR DUBAI</h4>
+          <p>
+            Your Trusted Car Rental in Dubai - Luxury, Sport & Economy Vehicles
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 APEX Motors. All rights reserved.</p>
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="car.html#inventory">Our Fleet</a></li>
+            <li><a href="car.html#about">Why Us</a></li>
+            <li><a href="car.html#contact">Contact</a></li>
+          </ul>
         </div>
+        <div class="footer-section">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 RENT A CAR DUBAI. All rights reserved. | +971 55 254 4440
+        </p>
+      </div>
     </footer>
 
     <script src="car.js"></script>
-</body>
+  </body>
 </html>

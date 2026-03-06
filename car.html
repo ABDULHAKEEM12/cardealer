@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APEX Motors - Premium Luxury Vehicles</title>
+    <title>RENT A CAR DUBAI 🇦🇪 ايجار سيارات في دبي</title>
     <link rel="stylesheet" href="car.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Playfair+Display:wght@700;800;900&family=Arabic+Typesetting&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/949c32d03e.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,9 +15,9 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <i class="fas fa-bolt"></i>
-                <span>APEX</span>
-                
+                <i class="fas fa-car"></i>
+                <span>🇦🇪 RENT A CAR DUBAI</span>
+                <span class="logo-arabic">ايجار سيارات في دبي 🇦🇪</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
@@ -26,6 +26,13 @@
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-toggle" id="languageToggle" title="عربي / English">
+                    <i class="fas fa-globe"></i>
+                    <span id="langText">العربية</span>
+                </button>
                 <a href="favorites.html" class="wishlist-btn" id="wishlistBtn">
                     <i class="fas fa-heart"></i>
                     <span id="wishlistCount">0</span>
@@ -40,68 +47,78 @@
     <!-- Hero Section with Video -->
     <section id="home" class="hero">
         <video class="hero-video" autoplay muted loop playsinline preload="metadata">
-            <source src="car.mp4" type="video/mp4">
+            <source src="rental.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">DRIVE EXCELLENCE</h1>
-            <p class="hero-subtitle">Discover the finest collection of luxury automobiles</p>
-            <button class="cta-btn" onclick="scrollToSection('#inventory')">
-                Explore Now
-                <i class="fas fa-arrow-right"></i>
-            </button>
-        </div>
+            <h1 class="hero-title">🚗 Your Trusted Car Rental in Dubai 🇦🇪</h1>
+            <p class="hero-subtitle">🚗 Luxury • Sport • Economy | 8,000+ Happy Clients</p>
+           
     </section>
 
     <!-- Inventory Section -->
     <section id="inventory" class="inventory">
         <div class="section-header">
-            <h2>Premium Collection</h2>
-            <p>Handpicked luxury vehicles for the discerning driver</p>
+            <h2>🚗 Our Fleet</h2>
+            <p>🚗 Luxury • Sport • Economy | Choose from 39+ vehicles at the best rates</p>
         </div>
 
-        <div class="filters">
-            <button class="filter-btn active" data-filter="all">All Vehicles</button>
-            <button class="filter-btn" data-filter="sports">Sports</button>
-            <button class="filter-btn" data-filter="luxury">Luxury</button>
-            <button class="filter-btn" data-filter="suv">SUV</button>
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Search by car brand (e.g., Ferrari, Mercedes, Porsche...)" 
+                    class="search-input"
+                >
+                <button class="search-clear" id="searchClear" style="display: none;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div id="searchResults" class="search-results" style="display: none;"></div>
         </div>
 
-        <div class="cars-grid" id="carsGrid"></div>
+        <div class="video-player-container">
+            <video class="inventory-video" id="inventoryVideo" controls preload="metadata">
+                <source src="rent.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="about-content">
             <div class="about-text">
-                <h2>Why Choose APEX?</h2>
+                <h2>🚗 Why Rent From Us?</h2>
                 <div class="features-list">
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Certified Premium</h3>
-                            <p>Every vehicle undergoes rigorous inspection</p>
+                            <h3>Wide Selection</h3>
+                            <p>Luxury, Sport & Economy vehicles for all needs</p>
                         </div>
                     </div>
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Lifetime Support</h3>
-                            <p>24/7 customer service and maintenance</p>
+                            <h3>24/7 Support</h3>
+                            <p>Round-the-clock customer service & roadside assistance</p>
                         </div>
                     </div>
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Financing Options</h3>
-                            <p>Flexible payment plans tailored to you</p>
+                            <h3>Flexible Plans</h3>
+                            <p>Daily, weekly & monthly rental options available</p>
                         </div>
                     </div>
                     <div class="feature">
                         <i class="fas fa-check-circle"></i>
                         <div>
-                            <h3>Trade-In Available</h3>
-                            <p>Get best value for your current vehicle</p>
+                            <h3>Guaranteed Quality</h3>
+                            <p>Well-maintained, insured vehicles ready to drive</p>
                         </div>
                     </div>
                 </div>
@@ -109,12 +126,16 @@
             <div class="about-image">
                 <div class="about-card">
                     <div class="stat">
-                        <h3>500+</h3>
-                        <p>Vehicles Sold</p>
+                        <h3>8,000+</h3>
+                        <p>Happy Clients</p>
                     </div>
                     <div class="stat">
-                        <h3>98%</h3>
-                        <p>Customer Satisfaction</p>
+                        <h3>670</h3>
+                        <p>Social Posts</p>
+                    </div>
+                    <div class="stat">
+                        <h3>10.1K</h3>
+                        <p>Followers</p>
                     </div>
                 </div>
             </div>
@@ -124,8 +145,8 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="section-header">
-            <h2>Get In Touch</h2>
-            <p>Schedule a test drive or inquire about a vehicle</p>
+            <h2>🚗 Book Your Dream Ride</h2>
+            <p>🚗 +971552544440 WHATSAPP TO BOOK! or fill out the form below</p>
         </div>
 
         <div class="contact-container">
@@ -144,9 +165,9 @@
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell us your rental needs..." required></textarea>
                 </div>
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn">Send Inquiry</button>
             </form>
 
             <div class="contact-info">
@@ -154,29 +175,30 @@
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <div>
-                        <h4>Address</h4>
-                        <p>123 Luxury Drive, Auto City, AC 10001</p>
+                        <h4>Location</h4>
+                        <p>Dubai, UAE</p>
+                    </div>
+                </div>
+                <div class="info-item whatsapp-highlight">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <p><a href="https://wa.me/971552544440">+971 55 254 4440</a></p>
+                        <small>BOOK YOUR DREAM RIDE NOW!</small>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
                     <div>
                         <h4>Phone</h4>
-                        <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
-                    </div>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p><a href="mailto:info@apexmotors.com">info@apexmotors.com</a></p>
+                        <p><a href="tel:+971552544440">+971 55 254 4440</a></p>
                     </div>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-clock"></i>
                     <div>
                         <h4>Hours</h4>
-                        <p>Mon-Fri: 9am - 8pm<br>Sat-Sun: 10am - 6pm</p>
+                        <p>24/7 Availability<br>Book anytime, pickup anytime</p>
                     </div>
                 </div>
             </div>
@@ -239,7 +261,7 @@
                             <i class="fas fa-heart"></i> Add to Wishlist
                         </button>
                         <button class="test-drive-btn" id="scheduleTestDriveBtn">
-                            <i class="fas fa-calendar"></i> Schedule Test Drive
+                            <i class="fas fa-calendar"></i> Book Now
                         </button>
                     </div>
                 </div>
@@ -247,7 +269,7 @@
         </div>
     </section>
 
-    <!-- Test Drive Booking Modal -->
+    <!-- Rental Booking Modal -->
     <div class="modal" id="testDriveModal">
         <div class="modal-content">
             <button class="modal-close" id="testDriveModalClose">
@@ -255,7 +277,7 @@
             </button>
             <div class="test-drive-form-wrapper">
                 <div class="test-drive-header">
-                    <h2>Schedule Your Test Drive</h2>
+                    <h2>Book Your Vehicle</h2>
                     <p id="testDriveCarName"></p>
                 </div>
                 <form class="test-drive-form" id="testDriveForm">
@@ -276,16 +298,17 @@
                             <input type="tel" id="drivePhone" name="phone" required>
                         </div>
                         <div class="form-group">
-                            <label for="driveDate">Preferred Date *</label>
+                            <label for="driveDate">Pickup Date *</label>
                             <input type="date" id="driveDate" name="date" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="driveTime">Preferred Time *</label>
+                            <label for="driveTime">Pickup Time *</label>
                             <select id="driveTime" name="time" required>
                                 <option value="">Select a time</option>
+                                <option value="8:00 AM">8:00 AM</option>
                                 <option value="9:00 AM">9:00 AM</option>
                                 <option value="10:00 AM">10:00 AM</option>
                                 <option value="11:00 AM">11:00 AM</option>
@@ -294,25 +317,31 @@
                                 <option value="3:00 PM">3:00 PM</option>
                                 <option value="4:00 PM">4:00 PM</option>
                                 <option value="5:00 PM">5:00 PM</option>
+                                <option value="6:00 PM">6:00 PM</option>
+                                <option value="8:00 PM">8:00 PM</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="driveLocation">Location Preference *</label>
-                            <select id="driveLocation" name="location" required>
-                                <option value="">Select location</option>
-                                <option value="Downtown Showroom">Downtown Showroom</option>
-                                <option value="Airport Showroom">Airport Showroom</option>
-                                <option value="Home Delivery">Home Delivery</option>
+                            <label for="driveLocation">Rental Duration *</label>
+                            <select id="driveLocation" name="duration" required>
+                                <option value="">Select duration</option>
+                                <option value="1 Day">1 Day</option>
+                                <option value="3 Days">3 Days</option>
+                                <option value="1 Week">1 Week</option>
+                                <option value="2 Weeks">2 Weeks</option>
+                                <option value="1 Month">1 Month</option>
+                                <option value="Custom">Custom Duration</option>
                             </select>
                         </div>
                     </div>
 
                     <div class="form-group full-width">
-                        <label for="driveMessage">Additional Notes (Optional)</label>
-                        <textarea id="driveMessage" name="message" rows="3" placeholder="Any special requests or questions?"></textarea>
+                        <label for="driveMessage">Special Requirements (Optional)</label>
+                        <textarea id="driveMessage" name="message" rows="3" placeholder="Any special requests like GPS, child seat, etc.?"></textarea>
                     </div>
 
-                    <button type="submit" class="submit-btn">Confirm Test Drive</button>
+                    <button type="submit" class="submit-btn">Complete Booking</button>
+                    <p class="booking-note">💡 Or message us on WhatsApp: <strong>+971 55 254 4440</strong></p>
                 </form>
             </div>
         </div>
@@ -322,29 +351,29 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-section">
-                <h4>APEX Motors</h4>
-                <p>Premium luxury vehicles for the elite driver</p>
+                <h4>RENT A CAR DUBAI</h4>
+                <p>Your Trusted Car Rental in Dubai - Luxury, Sport & Economy Vehicles</p>
             </div>
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="#inventory">Inventory</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#inventory">Our Fleet</a></li>
+                    <li><a href="#about">Why Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Follow Us</h4>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 APEX Motors. All rights reserved.</p>
+            <p>&copy; 2026 RENT A CAR DUBAI. All rights reserved. | +971 55 254 4440</p>
         </div>
     </footer>
 
